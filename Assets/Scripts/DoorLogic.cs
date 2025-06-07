@@ -5,7 +5,7 @@ using UnityEngine;
 public class DoorLogic : MonoBehaviour
 {
     public float invertDelay = 1f;
-    public GameObject colorBlindOverlay;
+    //public GameObject colorBlindOverlay;
     private bool isColorBlindActive = false;
     [SerializeField] GameObject timer;
     [SerializeField] float fastTimeMultiplyer = 2f;
@@ -13,10 +13,11 @@ public class DoorLogic : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D collision)
     {
+        Debug.Log("kurac triger");
         if (collision.tag == "Player")
         {
             string doorTag = gameObject.tag;
-
+            Debug.Log(doorTag);
             switch (doorTag)
             {
                 case "BlueDoor":
@@ -32,7 +33,7 @@ public class DoorLogic : MonoBehaviour
                     AddExtraTime();
                     break;
                 case "PurpleDoor":
-                    ToggleColorBlind(collision.gameObject, isColorBlindActive);
+                    //ToggleColorBlind(collision.gameObject, isColorBlindActive);
                     break;
                 default:
                     Debug.LogWarning("Unrecognized door tag: " + doorTag);
@@ -81,7 +82,7 @@ public class DoorLogic : MonoBehaviour
 
     }
     
-    private void ToggleColorBlind(GameObject player, bool activate)
+    /*private void ToggleColorBlind(GameObject player, bool activate)
     {
         UnityEngine.Camera mainCam = UnityEngine.Camera.main;
         ColorBlindManager manager = mainCam.GetComponent<ColorBlindManager>();
@@ -89,7 +90,7 @@ public class DoorLogic : MonoBehaviour
         {
             manager.EnableColorBlind(activate);
         }
-    }
+    }*/
 
 
 }

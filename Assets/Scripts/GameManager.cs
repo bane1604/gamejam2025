@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public Timer timerManager;
     public static GameManager Instance;
 
     public enum GamePhase
@@ -35,6 +36,7 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
+            timerManager.StartTimer();
             StartGameplayPhase();
         }
     }
