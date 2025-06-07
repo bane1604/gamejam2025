@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
     public float speedBoost = 2f;
     public float slowSpeed = 0.5f;
     public bool isInverted = false;
+    public bool movementEnabled = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,6 +16,8 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!movementEnabled)
+            return;
         float upDown = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
         float rightLeft = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
 
@@ -40,5 +43,10 @@ public class Player : MonoBehaviour
     public void ApplySlow()
     {
         moveSpeed = moveSpeed * slowSpeed;
+    }
+
+    public void SetMovement(bool val_ = true)
+    {
+        movementEnabled = val_;
     }
 }

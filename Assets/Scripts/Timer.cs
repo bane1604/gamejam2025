@@ -73,4 +73,9 @@ public class Timer : MonoBehaviour
     {
         multiplier *= multiplier_;
     }
+
+    public bool OutOfTime()
+    {
+        return timeRemaining <= 0f;
+    }
 }
