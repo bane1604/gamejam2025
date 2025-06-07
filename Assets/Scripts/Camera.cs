@@ -3,17 +3,19 @@ using UnityEngine;
 public class Camera : MonoBehaviour
 {
     public Transform player;
-    public float roomSize = 10f; // Dimenzija sobe
-    public float transitionTime = 0.5f; // Trajanje tranzicije
+    public float roomSize = 10f;
+    public float transitionTime = 0.5f;
 
     private Vector3 targetPosition;
     private Vector3 velocity = Vector3.zero;
+    private Vector2Int currentRoom;
 
     void Start()
     {
         if (player != null)
         {
-            targetPosition = GetRoomCenter(player.position);
+            currentRoom = GetRoomCoords(player.position);
+            targetPosition = GetRoomCenter(currentRoom);
             transform.position = new Vector3(targetPosition.x, targetPosition.y, transform.position.z);
         }
     }
@@ -22,30 +24,33 @@ public class Camera : MonoBehaviour
     {
         if (player == null) return;
 
-        Vector3 newTarget = GetRoomCenter(player.position);
+        Vector2Int newRoom = GetRoomCoords(player.position);
 
-        if (newTarget != targetPosition)
+        if (newRoom != currentRoom)
         {
-            targetPosition = newTarget;
+            currentRoom = newRoom;
+            targetPosition = GetRoomCenter(currentRoom);
         }
 
-        // Glatko pomeri kameru ka targetu u roku od 0.5 sekundi
         transform.position = Vector3.SmoothDamp(
             transform.position,
-            new Vector3(targetPosition.x, targetPosition.y, transform.position.z),
+            targetPosition,
             ref velocity,
             transitionTime
         );
     }
 
-    Vector3 GetRoomCenter(Vector3 playerPos)
+    Vector2Int GetRoomCoords(Vector3 playerPos)
     {
         int roomX = Mathf.FloorToInt(playerPos.x / roomSize);
         int roomY = Mathf.FloorToInt(playerPos.y / roomSize);
+        return new Vector2Int(roomX, roomY);
+    }
 
-        float centerX = roomX * roomSize + roomSize / 2f;
-        float centerY = roomY * roomSize + roomSize / 2f;
-
-        return new Vector3(centerX, centerY, 0f);
+    Vector3 GetRoomCenter(Vector2Int roomCoords)
+    {
+        float centerX = roomCoords.x * roomSize + roomSize / 2f;
+        float centerY = roomCoords.y * roomSize + roomSize / 2f;
+        return new Vector3(centerX, centerY, transform.position.z);
     }
 }
