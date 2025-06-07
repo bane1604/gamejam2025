@@ -8,9 +8,12 @@ public class Player : MonoBehaviour
     public bool isInverted = false;
     public bool movementEnabled = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    public Animator _animator;
+
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -19,7 +22,7 @@ public class Player : MonoBehaviour
         if (!movementEnabled)
             return;
         float upDown = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
-        float rightLeft = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
+        float rightLeft = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime; 
 
         if (isInverted)
         {
@@ -28,6 +31,24 @@ public class Player : MonoBehaviour
         }
 
         transform.Translate(rightLeft, upDown, 0);
+
+        if (upDown != 0 || rightLeft != 0)
+        {
+            _animator.SetBool("isRunning", true);
+        }
+        else
+        {
+            _animator.SetBool("isRunning", false);
+        }
+
+        if (rightLeft != 0)
+        {
+            Vector3 scale = transform.localScale;
+            scale.x = Mathf.Abs(scale.x) * (rightLeft > 0 ? 1 : -1);
+            transform.localScale = scale;
+        }
+
+        _animator.SetFloat("movementSpeed", moveSpeed);
     }
 
     public void InvertControls()
