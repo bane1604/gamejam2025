@@ -10,7 +10,6 @@ public class CameraController : MonoBehaviour
 
     private Vector3 targetPosition;
     private Vector3 velocity = Vector3.zero;
-    private Vector2Int currentRoom;
 
     void Start()
     {
@@ -27,21 +26,20 @@ public class CameraController : MonoBehaviour
 
         Vector3 newTarget = GetRoomCenter(playerObject.transform.position);
 
-        if (newRoom != currentRoom)
+        if (newTarget != targetPosition)
         {
-            currentRoom = newRoom;
-            targetPosition = GetRoomCenter(currentRoom);
+            targetPosition = newTarget;
         }
 
         transform.position = Vector3.SmoothDamp(
             transform.position,
-            targetPosition,
+            new Vector3(targetPosition.x, targetPosition.y, transform.position.z),
             ref velocity,
             transitionTime
         );
     }
 
-    Vector2Int GetRoomCoords(Vector3 playerPos)
+    Vector3 GetRoomCenter(Vector3 playerPos)
     {
         float step = roomSize + coridor_len / 2;
         int roomX = Mathf.FloorToInt(playerPos.x / step);
