@@ -680,7 +680,7 @@ Transform:
   m_GameObject: {fileID: 78319436}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -8.5, y: 34, z: 0}
+  m_LocalPosition: {x: -3.6999998, y: 38.7, z: 0}
   m_LocalScale: {x: 3, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -715,7 +715,7 @@ Transform:
   m_GameObject: {fileID: 84420117}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17, y: 8.5, z: 0}
+  m_LocalPosition: {x: -12.2, y: 13.200001, z: 0}
   m_LocalScale: {x: 3, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1138,7 +1138,7 @@ GameObject:
   - component: {fileID: 119384509}
   m_Layer: 0
   m_Name: LeftDoorTrigger
-  m_TagString: Door
+  m_TagString: GreenDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1203,7 +1203,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.7075472, g: 0.2522027, b: 0.06341223, a: 1}
+  m_Color: {r: 0.08235294, g: 0.7058824, b: 0.06341223, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1406,7 +1406,7 @@ GameObject:
   - component: {fileID: 164620730}
   m_Layer: 0
   m_Name: LeftDoorTrigger
-  m_TagString: Door
+  m_TagString: GreenDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1471,7 +1471,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.7075472, g: 0.2522027, b: 0.06341223, a: 1}
+  m_Color: {r: 0.08235294, g: 0.7058824, b: 0.06341223, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1687,7 +1687,7 @@ Transform:
   m_GameObject: {fileID: 190304223}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 25.5, z: 0}
+  m_LocalPosition: {x: 4.8, y: 30.2, z: 0}
   m_LocalScale: {x: 3, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2379,6 +2379,7 @@ GameObject:
   - component: {fileID: 282098423}
   - component: {fileID: 282098424}
   - component: {fileID: 282098425}
+  - component: {fileID: 282098426}
   m_Layer: 0
   m_Name: Room5
   m_TagString: Untagged
@@ -2395,7 +2396,7 @@ Transform:
   m_GameObject: {fileID: 282098422}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 17, z: 0}
+  m_LocalPosition: {x: 4.8, y: 21.7, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2472,6 +2473,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09c5152504f503841bc14dff720e491a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &282098426
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282098422}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &317645106
 GameObject:
   m_ObjectHideFlags: 0
@@ -2955,7 +3002,7 @@ Transform:
   m_GameObject: {fileID: 375300957}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.14, y: 16.63, z: -10}
+  m_LocalPosition: {x: -11.339999, y: 21.33, z: -10}
   m_LocalScale: {x: 0, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3404,7 +3451,7 @@ GameObject:
   - component: {fileID: 391209593}
   m_Layer: 0
   m_Name: LeftDoorTrigger
-  m_TagString: Door
+  m_TagString: BlueDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3469,7 +3516,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.7075472, g: 0.2522027, b: 0.06341223, a: 1}
+  m_Color: {r: 0.2784314, g: 0.42745098, b: 0.8, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3882,6 +3929,7 @@ GameObject:
   - component: {fileID: 480453412}
   - component: {fileID: 480453413}
   - component: {fileID: 480453414}
+  - component: {fileID: 480453415}
   m_Layer: 0
   m_Name: Room7
   m_TagString: Untagged
@@ -3898,7 +3946,7 @@ Transform:
   m_GameObject: {fileID: 480453411}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17, y: 34, z: 0}
+  m_LocalPosition: {x: -12.2, y: 38.7, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3975,6 +4023,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09c5152504f503841bc14dff720e491a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &480453415
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480453411}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &496038148
 GameObject:
   m_ObjectHideFlags: 0
@@ -4350,7 +4444,7 @@ Transform:
   m_GameObject: {fileID: 573004261}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -8.51, y: 0, z: 0}
+  m_LocalPosition: {x: -3.71, y: 4.700001, z: 0}
   m_LocalScale: {x: 3, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4642,7 +4736,7 @@ GameObject:
   - component: {fileID: 615034136}
   m_Layer: 0
   m_Name: TopDoorTrigger
-  m_TagString: Door
+  m_TagString: RedDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4707,7 +4801,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.7075472, g: 0.2522027, b: 0.06341223, a: 1}
+  m_Color: {r: 0.7058824, g: 0.062745094, b: 0.09556327, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5863,7 +5957,7 @@ Transform:
   m_GameObject: {fileID: 806390648}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -25.5, y: 34, z: 0}
+  m_LocalPosition: {x: -20.7, y: 38.7, z: 0}
   m_LocalScale: {x: 3, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6363,6 +6457,7 @@ GameObject:
   - component: {fileID: 842055286}
   - component: {fileID: 842055287}
   - component: {fileID: 842055288}
+  - component: {fileID: 842055289}
   m_Layer: 0
   m_Name: Room8
   m_TagString: Untagged
@@ -6379,7 +6474,7 @@ Transform:
   m_GameObject: {fileID: 842055285}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 34, z: 0}
+  m_LocalPosition: {x: 4.8, y: 38.7, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6456,6 +6551,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09c5152504f503841bc14dff720e491a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &842055289
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842055285}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &847356163
 GameObject:
   m_ObjectHideFlags: 0
@@ -6880,7 +7021,7 @@ Transform:
   m_GameObject: {fileID: 866884217}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.2809465, y: 1.4224187, z: 0}
+  m_LocalPosition: {x: 7.080947, y: 6.1224194, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7317,7 +7458,7 @@ Transform:
   m_GameObject: {fileID: 917482543}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 4.8, y: 4.700001, z: -10}
   m_LocalScale: {x: 0, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7432,6 +7573,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1764711425}
   roomSize: 10
+  coridorlen: 5
   transitionTime: 0.5
 --- !u!1 &920131275
 GameObject:
@@ -7542,7 +7684,7 @@ Transform:
   m_GameObject: {fileID: 939731030}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17, y: 0, z: 0}
+  m_LocalPosition: {x: -12.2, y: 4.700001, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8301,7 +8443,7 @@ GameObject:
   - component: {fileID: 1046256844}
   m_Layer: 0
   m_Name: LeftDoorTrigger
-  m_TagString: Door
+  m_TagString: BlueDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8366,7 +8508,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.7075472, g: 0.2522027, b: 0.06341223, a: 1}
+  m_Color: {r: 0.2784314, g: 0.42745098, b: 0.8, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -8917,7 +9059,7 @@ GameObject:
   - component: {fileID: 1116757712}
   m_Layer: 0
   m_Name: TopDoorTrigger
-  m_TagString: Door
+  m_TagString: RedDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8982,7 +9124,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.7075472, g: 0.2522027, b: 0.06341223, a: 1}
+  m_Color: {r: 0.7075472, g: 0.0627451, b: 0.09803922, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -9266,7 +9408,7 @@ GameObject:
   - component: {fileID: 1139616083}
   m_Layer: 0
   m_Name: TopDoorTrigger
-  m_TagString: Door
+  m_TagString: BlueDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9331,7 +9473,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.7075472, g: 0.2522027, b: 0.06341223, a: 1}
+  m_Color: {r: 0.2784314, g: 0.42745098, b: 0.8, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -9681,7 +9823,7 @@ Transform:
   m_GameObject: {fileID: 1183029019}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -8.51, y: 17, z: 0}
+  m_LocalPosition: {x: -3.71, y: 21.7, z: 0}
   m_LocalScale: {x: 3, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9756,6 +9898,7 @@ GameObject:
   - component: {fileID: 1187747890}
   - component: {fileID: 1187747891}
   - component: {fileID: 1187747892}
+  - component: {fileID: 1187747893}
   m_Layer: 0
   m_Name: Room4
   m_TagString: Untagged
@@ -9772,7 +9915,7 @@ Transform:
   m_GameObject: {fileID: 1187747889}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17, y: 17, z: 0}
+  m_LocalPosition: {x: -12.2, y: 21.7, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9849,6 +9992,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09c5152504f503841bc14dff720e491a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &1187747893
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187747889}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1190549663
 GameObject:
   m_ObjectHideFlags: 0
@@ -10262,6 +10451,7 @@ GameObject:
   - component: {fileID: 1204589241}
   - component: {fileID: 1204589242}
   - component: {fileID: 1204589243}
+  - component: {fileID: 1204589244}
   m_Layer: 0
   m_Name: Room3
   m_TagString: Untagged
@@ -10278,7 +10468,7 @@ Transform:
   m_GameObject: {fileID: 1204589240}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -34, y: 17, z: 0}
+  m_LocalPosition: {x: -29.2, y: 21.7, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10355,6 +10545,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09c5152504f503841bc14dff720e491a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &1204589244
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204589240}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1236208403
 GameObject:
   m_ObjectHideFlags: 0
@@ -10752,7 +10988,7 @@ Transform:
   m_GameObject: {fileID: 1275250074}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 4.8, y: 4.700001, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11273,8 +11509,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1332314660}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -34, y: 34, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -29.2, y: 38.7, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11283,7 +11519,7 @@ Transform:
   - {fileID: 114078129}
   - {fileID: 2097348029}
   m_Father: {fileID: 1080416905}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &1332314662
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11725,7 +11961,7 @@ Transform:
   m_GameObject: {fileID: 1382540356}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 4.8, y: 4.700001, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11850,7 +12086,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1 &1404531830
 GameObject:
   m_ObjectHideFlags: 0
@@ -11877,7 +12113,7 @@ Transform:
   m_GameObject: {fileID: 1404531830}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -34, y: 25.5, z: 0}
+  m_LocalPosition: {x: -29.2, y: 30.2, z: 0}
   m_LocalScale: {x: 3, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11967,7 +12203,7 @@ Transform:
   m_GameObject: {fileID: 1408837127}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17, y: 25.5, z: 0}
+  m_LocalPosition: {x: -12.2, y: 30.2, z: 0}
   m_LocalScale: {x: 3, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12312,7 +12548,7 @@ GameObject:
   - component: {fileID: 1493483312}
   m_Layer: 0
   m_Name: TopDoorTrigger
-  m_TagString: Door
+  m_TagString: GreenDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12377,7 +12613,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.7075472, g: 0.2522027, b: 0.06341223, a: 1}
+  m_Color: {r: 0.08235294, g: 0.7058824, b: 0.06341223, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -12926,7 +13162,7 @@ GameObject:
   - component: {fileID: 1542570521}
   m_Layer: 0
   m_Name: TopDoorTrigger
-  m_TagString: Door
+  m_TagString: RedDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12991,7 +13227,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.7075472, g: 0.2522027, b: 0.06341223, a: 1}
+  m_Color: {r: 0.7075472, g: 0.0627451, b: 0.09803922, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -13060,7 +13296,7 @@ GameObject:
   - component: {fileID: 1543541865}
   m_Layer: 0
   m_Name: TopDoorTrigger
-  m_TagString: Door
+  m_TagString: RedDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13125,7 +13361,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.7075472, g: 0.2522027, b: 0.06341223, a: 1}
+  m_Color: {r: 0.7058824, g: 0.0627451, b: 0.09803922, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -13194,7 +13430,7 @@ GameObject:
   - component: {fileID: 1545738156}
   m_Layer: 0
   m_Name: LeftDoorTrigger
-  m_TagString: Door
+  m_TagString: GreenDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13259,7 +13495,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.7075472, g: 0.2522027, b: 0.06341223, a: 1}
+  m_Color: {r: 0.08071445, g: 0.7058824, b: 0.062745094, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -13462,7 +13698,7 @@ GameObject:
   - component: {fileID: 1562121241}
   m_Layer: 0
   m_Name: LeftDoorTrigger
-  m_TagString: Door
+  m_TagString: RedDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13527,7 +13763,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.7075472, g: 0.2522027, b: 0.06341223, a: 1}
+  m_Color: {r: 0.7075472, g: 0.0627451, b: 0.09803922, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -14020,7 +14256,7 @@ GameObject:
   - component: {fileID: 1703862170}
   m_Layer: 0
   m_Name: TopDoorTrigger
-  m_TagString: Door
+  m_TagString: GreenDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14085,7 +14321,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.7075472, g: 0.2522027, b: 0.06341223, a: 1}
+  m_Color: {r: 0.08235294, g: 0.7058824, b: 0.06341223, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -14817,7 +15053,7 @@ GameObject:
   - component: {fileID: 1793870827}
   m_Layer: 0
   m_Name: LeftDoorTrigger
-  m_TagString: Door
+  m_TagString: GreenDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14882,7 +15118,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.7075472, g: 0.2522027, b: 0.06341223, a: 1}
+  m_Color: {r: 0.08235294, g: 0.7058824, b: 0.06341223, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -14951,7 +15187,7 @@ GameObject:
   - component: {fileID: 1798883934}
   m_Layer: 0
   m_Name: LeftDoorTrigger
-  m_TagString: Door
+  m_TagString: BlueDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15016,7 +15252,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.7075472, g: 0.2522027, b: 0.06341223, a: 1}
+  m_Color: {r: 0.27492344, g: 0.42409128, b: 0.79622644, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -15487,7 +15723,7 @@ GameObject:
   - component: {fileID: 1879342691}
   m_Layer: 0
   m_Name: LeftDoorTrigger
-  m_TagString: Door
+  m_TagString: BlueDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15552,7 +15788,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.7075472, g: 0.2522027, b: 0.06341223, a: 1}
+  m_Color: {r: 0.2784314, g: 0.42745098, b: 0.8, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -16163,7 +16399,7 @@ Transform:
   m_GameObject: {fileID: 1927406281}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 8.5, z: 0}
+  m_LocalPosition: {x: 4.8, y: 13.200001, z: 0}
   m_LocalScale: {x: 3, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16253,7 +16489,7 @@ Transform:
   m_GameObject: {fileID: 1943460495}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -25.5, y: 17, z: 0}
+  m_LocalPosition: {x: -20.7, y: 21.7, z: 0}
   m_LocalScale: {x: 3, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16543,6 +16779,7 @@ GameObject:
   - component: {fileID: 1991234149}
   - component: {fileID: 1991234150}
   - component: {fileID: 1991234151}
+  - component: {fileID: 1991234152}
   m_Layer: 0
   m_Name: Room2
   m_TagString: Untagged
@@ -16559,7 +16796,7 @@ Transform:
   m_GameObject: {fileID: 1991234148}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -34, y: 0, z: 0}
+  m_LocalPosition: {x: -29.2, y: 4.700001, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16636,6 +16873,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09c5152504f503841bc14dff720e491a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &1991234152
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991234148}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &2002432518
 GameObject:
   m_ObjectHideFlags: 0
@@ -16743,7 +17026,7 @@ Transform:
   m_GameObject: {fileID: 2004517082}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -34, y: 8.5, z: 0}
+  m_LocalPosition: {x: -29.2, y: 13.200001, z: 0}
   m_LocalScale: {x: 3, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17182,7 +17465,7 @@ Transform:
   m_GameObject: {fileID: 2042073434}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -25.5, y: 0, z: 0}
+  m_LocalPosition: {x: -20.7, y: 4.700001, z: 0}
   m_LocalScale: {x: 3, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -18197,7 +18480,7 @@ GameObject:
   - component: {fileID: 2137941474}
   m_Layer: 0
   m_Name: TopDoorTrigger
-  m_TagString: Door
+  m_TagString: GreenDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18262,7 +18545,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.7075472, g: 0.2522027, b: 0.06341223, a: 1}
+  m_Color: {r: 0.08235294, g: 0.7058824, b: 0.06341223, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

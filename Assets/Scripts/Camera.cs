@@ -4,6 +4,8 @@ public class Camera : MonoBehaviour
 {
     public Transform player;
     public float roomSize = 10f;
+
+    public float coridorlen = 5f;
     public float transitionTime = 0.5f;
 
     private Vector3 targetPosition;
@@ -42,15 +44,15 @@ public class Camera : MonoBehaviour
 
     Vector2Int GetRoomCoords(Vector3 playerPos)
     {
-        int roomX = Mathf.FloorToInt(playerPos.x / roomSize);
-        int roomY = Mathf.FloorToInt(playerPos.y / roomSize);
+        int roomX = Mathf.FloorToInt(playerPos.x / (roomSize + coridorlen));
+        int roomY = Mathf.FloorToInt(playerPos.y / (roomSize + coridorlen));
         return new Vector2Int(roomX, roomY);
     }
 
     Vector3 GetRoomCenter(Vector2Int roomCoords)
     {
-        float centerX = roomCoords.x * roomSize + roomSize / 2f;
-        float centerY = roomCoords.y * roomSize + roomSize / 2f;
+        float centerX = roomCoords.x * roomSize + (roomSize+coridorlen) / 2f;
+        float centerY = roomCoords.y * roomSize + (roomSize+coridorlen) / 2f;
         return new Vector3(centerX, centerY, transform.position.z);
     }
 }
