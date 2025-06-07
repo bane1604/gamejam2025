@@ -1,2 +1,33 @@
-Temp/
-Library/
+# Unity cache i build folderi koji ne treba da se prate
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+
+# User-specific IDE fajlovi i konfiguracije
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+
+# OS fajlovi
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# IDE foldere
+.vscode/
+.idea/
+
+# Unity Collab (ako ne koristite)
+.collabignore
+.collab/
