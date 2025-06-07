@@ -7,6 +7,9 @@ public class DoorLogic : MonoBehaviour
     public float invertDelay = 1f;
     public GameObject colorBlindOverlay;
     private bool isColorBlindActive = false;
+    [SerializeField] GameObject timer;
+    [SerializeField] float fastTimeMultiplyer = 2f;
+    [SerializeField] float slowTimeMultiplyer = 0.5f;
 
     void OnTriggerExit2D(Collider2D collision)
     {
@@ -17,7 +20,7 @@ public class DoorLogic : MonoBehaviour
             switch (doorTag)
             {
                 case "BlueDoor":
-                    ApplySpeedBoost(collision.gameObject);
+                    ApplySpeedBoost(collision.gameObject, timer);
                     break;
                 case "RedDoor":
                     StartCoroutine(InvertControlsAfterDelay(collision.gameObject, invertDelay));
@@ -29,7 +32,7 @@ public class DoorLogic : MonoBehaviour
                     AddExtraTime();
                     break;
                 case "PurpleDoor":
-                    ToggleColorBlindOverlay();
+                    ToggleColorBlind(collision.gameObject, isColorBlindActive);
                     break;
                 default:
                     Debug.LogWarning("Unrecognized door tag: " + doorTag);
@@ -52,7 +55,9 @@ public class DoorLogic : MonoBehaviour
     private void SlowDownTime(GameObject gameObject)
     {
         Player player = gameObject.GetComponent<Player>();
+        Timer timerManager = timer.GetComponent<Timer>();
         player.ApplySlow();
+        timerManager.SetAccelerated(slowTimeMultiplyer);
     }
 
     private IEnumerator InvertControlsAfterDelay(GameObject playerObject, float delay)
@@ -67,26 +72,24 @@ public class DoorLogic : MonoBehaviour
     }
 
 
-    private void ApplySpeedBoost(GameObject gameObject)
+    private void ApplySpeedBoost(GameObject gameObject, GameObject timer)
     {
         Player player = gameObject.GetComponent<Player>();
+        Timer timerManager = timer.GetComponent<Timer>();
         player.ApplyBoost();
+        timerManager.SetAccelerated(fastTimeMultiplyer);
+
     }
     
-    private void ToggleColorBlindOverlay()
+    private void ToggleColorBlind(GameObject player, bool activate)
     {
-        SpriteRenderer sr = colorBlindOverlay.GetComponent<SpriteRenderer>();
-
-        if (!isColorBlindActive)
+        UnityEngine.Camera mainCam = UnityEngine.Camera.main;
+        ColorBlindManager manager = mainCam.GetComponent<ColorBlindManager>();
+        if (manager != null)
         {
-            sr.color = new Color(0.5f, 0.5f, 0.5f, 0.7f);
-            isColorBlindActive = true;
-        }
-        else
-        {
-            sr.color = new Color(0.5f, 0.5f, 0.5f, 0f);
-            isColorBlindActive = false;
+            manager.EnableColorBlind(activate);
         }
     }
+
 
 }

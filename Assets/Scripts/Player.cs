@@ -3,8 +3,8 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    public float speedBoost = 10f;
-    public float slowSpeed = 2f;
+    public float speedBoost = 2f;
+    public float slowSpeed = 0.5f;
     public bool isInverted = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -34,11 +34,11 @@ public class Player : MonoBehaviour
 
     public void ApplyBoost()
     {
-        moveSpeed = speedBoost;
+        moveSpeed = moveSpeed * speedBoost;
     }
 
     public void ApplySlow()
     {
-        moveSpeed = slowSpeed;
+        moveSpeed = moveSpeed * slowSpeed;
     }
 }
