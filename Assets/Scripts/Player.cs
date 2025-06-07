@@ -3,10 +3,13 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float moveSpeed = 5f;
+    public float speedBoost = 10f;
+    public float slowSpeed = 2f;
+    public bool isInverted = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -14,6 +17,28 @@ public class Player : MonoBehaviour
     {
         float upDown = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
         float rightLeft = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
+
+        if (isInverted)
+        {
+            upDown = -upDown;
+            rightLeft = -rightLeft;
+        }
+
         transform.Translate(rightLeft, upDown, 0);
+    }
+
+    public void InvertControls()
+    {
+        isInverted = !isInverted;
+    }
+
+    public void ApplyBoost()
+    {
+        moveSpeed = speedBoost;
+    }
+
+    public void ApplySlow()
+    {
+        moveSpeed = slowSpeed;
     }
 }

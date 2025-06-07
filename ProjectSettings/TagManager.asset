@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 3
   tags:
   - Room
+  - RedDoor
+  - BlueDoor
+  - GreenDoor
+  - PurpleDoor
   layers:
   - Default
   - TransparentFX
