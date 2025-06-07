@@ -51,9 +51,6 @@ public class CameraController : MonoBehaviour
         float centerY = roomY * step + roomSize / 2f + (coridor_len / 2) * roomY;
 
 
-        Debug.Log($"[Camera] Camera seto to ({centerX}, {centerY})");
-        Debug.Log($"[Camera] Player is at ({playerPos.x}, {playerPos.y})");
-        Debug.Log($"[Camera] Player is in room ({roomX}, {roomY})");
 
 
         return new Vector3(centerX, centerY, 0f);

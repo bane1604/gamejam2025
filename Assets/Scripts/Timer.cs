@@ -14,7 +14,7 @@ public class Timer : MonoBehaviour
     private float multiplier;
 
     [Header("UI Reference")]
-    public TextMeshProUGUI timeText; 
+    public TextMeshProUGUI timeText;
 
     void Awake()
     {
@@ -24,7 +24,7 @@ public class Timer : MonoBehaviour
     void Start()
     {
         multiplier = 1;
-        isRunning = true;
+        isRunning = false;
         UpdateDisplay();
     }
 
@@ -72,5 +72,10 @@ public class Timer : MonoBehaviour
     public void SetAccelerated(float multiplier_)
     {
         multiplier *= multiplier_;
+    }
+
+    public bool OutOfTime()
+    {
+        return timeRemaining <= 0f;
     }
 }

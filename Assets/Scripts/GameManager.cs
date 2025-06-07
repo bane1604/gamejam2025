@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public Timer timerManager;
     public static GameManager Instance;
-
+    public Player player;
     public enum GamePhase
     {
         Preparation,
@@ -35,7 +36,21 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
+            timerManager.StartTimer();
             StartGameplayPhase();
+            player.SetMovement(true);
         }
+
+        if(timerManager.OutOfTime())
+        {
+            //TODO: Game over
+            player.SetMovement(false);
+            currentPhase = GamePhase.End;
+        }
+    }
+
+    public GamePhase GetGamePhase()
+    {
+        return currentPhase;
     }
 }
