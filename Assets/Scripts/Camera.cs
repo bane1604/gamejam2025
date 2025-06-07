@@ -1,35 +1,36 @@
 using UnityEngine;
 
-public class Camera : MonoBehaviour
+public class CameraController : MonoBehaviour
 {
-    public Transform player;
-    public float roomSize = 10f; // Dimenzija sobe
-    public float transitionTime = 0.5f; // Trajanje tranzicije
+    public GameObject playerObject; 
+    public float roomSize = 14f;
+    public float transitionTime = 0.5f;
+    public float coridor_len = 5f;
+    public float coridor_width = 3f;
 
     private Vector3 targetPosition;
     private Vector3 velocity = Vector3.zero;
 
     void Start()
     {
-        if (player != null)
+        if (playerObject != null)
         {
-            targetPosition = GetRoomCenter(player.position);
+            targetPosition = GetRoomCenter(playerObject.transform.position);
             transform.position = new Vector3(targetPosition.x, targetPosition.y, transform.position.z);
         }
     }
 
     void LateUpdate()
     {
-        if (player == null) return;
+        if (playerObject == null) return;
 
-        Vector3 newTarget = GetRoomCenter(player.position);
+        Vector3 newTarget = GetRoomCenter(playerObject.transform.position);
 
         if (newTarget != targetPosition)
         {
             targetPosition = newTarget;
         }
 
-        // Glatko pomeri kameru ka targetu u roku od 0.5 sekundi
         transform.position = Vector3.SmoothDamp(
             transform.position,
             new Vector3(targetPosition.x, targetPosition.y, transform.position.z),
@@ -40,11 +41,20 @@ public class Camera : MonoBehaviour
 
     Vector3 GetRoomCenter(Vector3 playerPos)
     {
-        int roomX = Mathf.FloorToInt(playerPos.x / roomSize);
-        int roomY = Mathf.FloorToInt(playerPos.y / roomSize);
+        float step = roomSize + coridor_len / 2;
+        int roomX = Mathf.FloorToInt(playerPos.x / step);
+        int roomY = Mathf.FloorToInt(playerPos.y / step);
 
-        float centerX = roomX * roomSize + roomSize / 2f;
-        float centerY = roomY * roomSize + roomSize / 2f;
+
+        
+        float centerX = roomX * step + roomSize / 2f + (coridor_len / 2) * roomX;
+        float centerY = roomY * step + roomSize / 2f + (coridor_len / 2) * roomY;
+
+
+        Debug.Log($"[Camera] Camera seto to ({centerX}, {centerY})");
+        Debug.Log($"[Camera] Player is at ({playerPos.x}, {playerPos.y})");
+        Debug.Log($"[Camera] Player is in room ({roomX}, {roomY})");
+
 
         return new Vector3(centerX, centerY, 0f);
     }
