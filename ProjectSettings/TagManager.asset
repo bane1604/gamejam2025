@@ -9,6 +9,7 @@ TagManager:
   - BlueDoor
   - GreenDoor
   - PurpleDoor
+  - Door
   layers:
   - Default
   - TransparentFX
