@@ -64,6 +64,7 @@ public class Timer : MonoBehaviour
     public void ResetTimer(float timeRemaining_)
     {
         isRunning = false;
+        multiplier = 1;
         timeRemaining = timeRemaining_;
         UpdateDisplay();
     }
