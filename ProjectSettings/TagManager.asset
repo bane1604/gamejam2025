@@ -11,6 +11,8 @@ TagManager:
   - PurpleDoor
   - Door
   - Button
+  - Gold
+  - GoldDoor
   layers:
   - Default
   - TransparentFX
