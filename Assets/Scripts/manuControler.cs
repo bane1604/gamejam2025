@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
@@ -24,6 +25,7 @@ public class MainMenuControllerAuto : MonoBehaviour
         manuPanel = GameObject.Find("ManuPanel");
 
         playButton = GameObject.Find("Play").GetComponent<Button>();
+        Debug.Log(playButton.tag);
         tutorialButton = GameObject.Find("Tutorial").GetComponent<Button>();
         settingsButton = GameObject.Find("Settings").GetComponent<Button>();
         exitButton = GameObject.Find("Exit").GetComponent<Button>();
@@ -58,6 +60,7 @@ public class MainMenuControllerAuto : MonoBehaviour
     public void PlayGame()
     {
         Debug.Log("▶️ Play Game");
+        SceneManager.LoadScene("LalicLevel1");
         // TODO: SceneManager.LoadScene("GameScene");
     }
 

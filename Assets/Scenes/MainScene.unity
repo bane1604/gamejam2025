@@ -7277,6 +7277,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ed0254767e4e3948ad4718139ff04b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerManager: {fileID: 0}
+  player: {fileID: 0}
   currentPhase: 0
 --- !u!4 &889514206
 Transform:
@@ -7658,10 +7660,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b1b004d8e2da9a4ea28cbd4f613177d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1764711425}
-  roomSize: 10
-  coridorlen: 5
+  playerObject: {fileID: 0}
+  roomxSize: 14
+  roomySize: 15
   transitionTime: 0.5
+  coridor_len: 5
+  coridor_width: 3
 --- !u!1 &920131275
 GameObject:
   m_ObjectHideFlags: 0
@@ -9539,7 +9543,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1020602615
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16171,6 +16175,8 @@ MonoBehaviour:
   speedBoost: 10
   slowSpeed: 2
   isInverted: 0
+  movementEnabled: 0
+  _animator: {fileID: 0}
 --- !u!4 &1764711425
 Transform:
   m_ObjectHideFlags: 0
@@ -17772,7 +17778,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapCamera: {fileID: 375300960}
-  roomCamera: {fileID: 917482549}
+  roomCamera: {fileID: 0}
 --- !u!4 &1922487728
 Transform:
   m_ObjectHideFlags: 0
