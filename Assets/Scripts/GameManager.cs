@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -41,11 +42,12 @@ public class GameManager : MonoBehaviour
             player.SetMovement(true);
         }
 
-        if(timerManager.OutOfTime())
+        if (timerManager.OutOfTime())
         {
-            //TODO: Game over
+
             player.SetMovement(false);
             currentPhase = GamePhase.End;
+            SceneManager.LoadScene("LoseScene");
         }
     }
 

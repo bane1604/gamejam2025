@@ -66,7 +66,7 @@ public class MainMenuControllerAuto : MonoBehaviour
     public void OpenTutorial()
     {
         Debug.Log("📘 Tutorial");
-        SceneManager.LoadScene("win");
+        SceneManager.LoadScene("TutorialScene");
     }
 
     public void OpenSettings()
