@@ -28,6 +28,7 @@ desktop.ini
 .vscode/
 .idea/
 .vs/
+UserSettings/
 
 # Unity Collab (ako ne koristite)
 .collabignore

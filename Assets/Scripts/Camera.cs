@@ -42,15 +42,18 @@ public class CameraController : MonoBehaviour
 
     Vector3 GetRoomCenter(Vector3 playerPos)
     {
-        float stepx = roomxSize + coridor_len / 2;
+        float stepx = roomxSize + coridor_len;
         float stepy = roomySize + coridor_len / 2;
         int roomX = Mathf.FloorToInt(playerPos.x / stepx);
         int roomY = Mathf.FloorToInt(playerPos.y / stepy);
 
 
         
-        float centerX = roomX * stepx + roomxSize / 2f + (coridor_len / 2) * roomX;
-        float centerY = roomY * stepy + roomySize / 2f + (coridor_len / 2) * roomY;
+        float centerX = roomX * (roomxSize + coridor_len/2) + roomxSize / 2f + (coridor_len / 2) * roomX;
+        float centerY = roomY * (roomySize + coridor_len) + roomySize / 2f + (coridor_len / 2) * roomY;
+
+        if (roomY > 0)
+            centerY -= (roomY) * roomySize / 5;
         Debug.Log($"RoomX: {roomX}, RoomY: {roomY}, CenterX: {centerX}, CenterY: {centerY}");
 
 

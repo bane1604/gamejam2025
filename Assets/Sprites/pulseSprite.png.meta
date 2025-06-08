@@ -259,7 +259,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pulseSprite_0: -1136485328779511713
+      pulseSprite_1: 7656217931408089517
+      pulseSprite_2: -3284999452815736401
+      pulseSprite_3: 6532108020882872901
+      pulseSprite_4: 5364496936251870888
+      pulseSprite_5: -4558098852742662773
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
