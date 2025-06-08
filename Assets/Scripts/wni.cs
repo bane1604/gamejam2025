@@ -3,8 +3,13 @@ using UnityEngine.SceneManagement;
 
 public class WinMenuManager : MonoBehaviour
 {
-    public GameObject winPanel;
-
+    void Start()
+    {
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.StopBackgroundMusic();
+        }
+    }
     public void RestartGame()
     {
         Debug.Log("Restart dugme kliknuto!");

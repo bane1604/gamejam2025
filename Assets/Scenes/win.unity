@@ -968,7 +968,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1906396401}
         m_TargetAssemblyTypeName: WinMenuManager, Assembly-CSharp
-        m_MethodName: MainMenu
+        m_MethodName: GoToMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1029,7 +1029,7 @@ GameObject:
   - component: {fileID: 1598630872}
   - component: {fileID: 1598630874}
   m_Layer: 5
-  m_Name: restart
+  m_Name: mainmenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1325,10 +1325,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1906396399}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5555e6926fe3a649ae38eebc547242f, type: 3}
+  m_Script: {fileID: 11500000, guid: 112cafd769bb7cd4a8ecba8f3152fb24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  winPanel: {fileID: 1196087420}
+  winPanel: {fileID: 0}
 --- !u!1 &2085426781
 GameObject:
   m_ObjectHideFlags: 0

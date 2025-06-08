@@ -33,8 +33,11 @@ public class Timer : MonoBehaviour
     void Update()
     {
         if (!isRunning) return;
-        float bpm = Mathf.Lerp(30f, 120f, 1 - (timeRemaining / maxTime));
-        AudioManager.Instance.SetHeartbeatRate(bpm);
+        if (AudioManager.Instance != null)
+        {
+            float bpm = Mathf.Lerp(30f, 120f, 1 - (timeRemaining / maxTime));
+            AudioManager.Instance.SetHeartbeatRate(bpm);
+        }
         float delta = Time.deltaTime * multiplier;
         timeRemaining -= delta;
 

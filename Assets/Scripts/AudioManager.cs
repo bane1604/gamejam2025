@@ -24,7 +24,7 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         bgMusicSource.loop = true;
-        bgMusicSource.volume = 0.1f; // Low volume
+        bgMusicSource.volume = 0.2f; // Low volume
         bgMusicSource.Play();
     }
 
@@ -45,4 +45,15 @@ public class AudioManager : MonoBehaviour
     {
         footstepSource.Stop();
     }
+
+    public void StopBackgroundMusic()
+    {
+        if (bgMusicSource != null && bgMusicSource.isPlaying)
+        {
+            bgMusicSource.Stop();
+            heartbeatSource.Stop();
+            footstepSource.Stop();
+        }
+    }
+
 }

@@ -44,9 +44,13 @@ public class GameManager : MonoBehaviour
 
         if (timerManager.OutOfTime())
         {
-
+            player.setAnimatorRunning(false);
             player.SetMovement(false);
             currentPhase = GamePhase.End;
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.StopBackgroundMusic();
+            }
             SceneManager.LoadScene("LoseScene");
         }
     }

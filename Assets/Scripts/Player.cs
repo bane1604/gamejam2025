@@ -36,12 +36,18 @@ public class Player : MonoBehaviour
         if (upDown != 0 || rightLeft != 0)
         {
             _animator.SetBool("isRunning", true);
-            AudioManager.Instance.PlayFootstep();
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlayFootstep();
+            }
         }
         else
         {
             _animator.SetBool("isRunning", false);
-            AudioManager.Instance.StopFootstep();
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.StopFootstep();
+            }
         }
 
         if (rightLeft != 0)
@@ -73,4 +79,10 @@ public class Player : MonoBehaviour
     {
         movementEnabled = val_;
     }
-}
+
+    public void setAnimatorRunning(bool x)
+    {
+        _animator.SetBool("isRunning", x);
+    }
+    
+    }
