@@ -12,7 +12,6 @@ public class Timer : MonoBehaviour
     private float timeRemaining;
     private bool isRunning;
     private float multiplier;
-    public Animator heartAnimator;
 
     [Header("UI Reference")]
     public TextMeshProUGUI timeText;
@@ -32,7 +31,6 @@ public class Timer : MonoBehaviour
     void Update()
     {
         if (!isRunning) return;
-        heartAnimator.Play("HeartPulse");
         float delta = Time.deltaTime * multiplier;
         timeRemaining -= delta;
 
