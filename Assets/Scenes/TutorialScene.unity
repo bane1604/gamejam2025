@@ -3438,6 +3438,7 @@ MonoBehaviour:
   timer: {fileID: 0}
   fastTimeMultiplyer: 2
   slowTimeMultiplyer: 0.5
+  winnerSceneName: WinnerScene
 --- !u!212 &108622418
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3841,7 +3842,7 @@ Transform:
   m_GameObject: {fileID: 131177389}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -38.351, y: -0.7099998, z: 0}
+  m_LocalPosition: {x: 28.998997, y: 5.8900013, z: 0}
   m_LocalScale: {x: 3, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4332,7 +4333,7 @@ Transform:
   m_GameObject: {fileID: 162602253}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -7.9, y: -0.8, z: 0}
+  m_LocalPosition: {x: 59.449997, y: 5.8000007, z: 0}
   m_LocalScale: {x: 3, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4503,7 +4504,7 @@ Transform:
   m_GameObject: {fileID: 174179932}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 67.35, y: 6.600001, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9153,6 +9154,7 @@ MonoBehaviour:
   timer: {fileID: 2124220056}
   fastTimeMultiplyer: 2
   slowTimeMultiplyer: 0.5
+  winnerSceneName: WinnerScene
 --- !u!1 &391311550
 GameObject:
   m_ObjectHideFlags: 0
@@ -9570,7 +9572,7 @@ Transform:
   m_GameObject: {fileID: 398911989}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -46.149998, y: -0.70000076, z: 0}
+  m_LocalPosition: {x: 21.2, y: 5.9, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12307,6 +12309,7 @@ MonoBehaviour:
   timer: {fileID: 0}
   fastTimeMultiplyer: 2
   slowTimeMultiplyer: 0.5
+  winnerSceneName: WinnerScene
 --- !u!212 &559605328
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15226,6 +15229,7 @@ MonoBehaviour:
   timer: {fileID: 2124220056}
   fastTimeMultiplyer: 2
   slowTimeMultiplyer: 0.5
+  winnerSceneName: WinnerScene
 --- !u!1 &698407368
 GameObject:
   m_ObjectHideFlags: 0
@@ -16077,7 +16081,7 @@ Transform:
   m_GameObject: {fileID: 754742297}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -61.62, y: -0.75, z: 0}
+  m_LocalPosition: {x: 5.7299995, y: 5.850001, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -19536,6 +19540,7 @@ MonoBehaviour:
   timer: {fileID: 2124220056}
   fastTimeMultiplyer: 2
   slowTimeMultiplyer: 0.5
+  winnerSceneName: WinnerScene
 --- !u!1 &881404509
 GameObject:
   m_ObjectHideFlags: 0
@@ -20992,7 +20997,7 @@ Transform:
   m_GameObject: {fileID: 945422135}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -23.492, y: -0.75, z: 0}
+  m_LocalPosition: {x: 43.857998, y: 5.850001, z: 0}
   m_LocalScale: {x: 3, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -22189,7 +22194,7 @@ Transform:
   m_GameObject: {fileID: 1016864747}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -31.3, y: -0.7, z: 0}
+  m_LocalPosition: {x: 36.05, y: 5.900001, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -29052,7 +29057,7 @@ Transform:
   m_GameObject: {fileID: 1274643309}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.11999893, y: -0.70000076, z: 0}
+  m_LocalPosition: {x: 67.23, y: 5.9, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -29544,7 +29549,7 @@ Transform:
   m_GameObject: {fileID: 1293721310}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -30.3, y: 2.8, z: -10}
+  m_LocalPosition: {x: 37.05, y: 9.400001, z: -10}
   m_LocalScale: {x: 0, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -38343,6 +38348,7 @@ MonoBehaviour:
   timer: {fileID: 2124220056}
   fastTimeMultiplyer: 2
   slowTimeMultiplyer: 0.5
+  winnerSceneName: WinnerScene
 --- !u!1 &1745200529
 GameObject:
   m_ObjectHideFlags: 0
@@ -39690,6 +39696,7 @@ GameObject:
   - component: {fileID: 1779140102}
   - component: {fileID: 1779140101}
   - component: {fileID: 1779140104}
+  - component: {fileID: 1779140105}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -39765,7 +39772,7 @@ Transform:
   m_GameObject: {fileID: 1779140100}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.36, y: 1.21, z: -10}
+  m_LocalPosition: {x: 66.99, y: 7.810001, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -39815,6 +39822,24 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &1779140105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779140100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b1b004d8e2da9a4ea28cbd4f613177d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerObject: {fileID: 174179932}
+  roomxSize: 14
+  roomySize: 15
+  transitionTime: 0.5
+  coridor_len: 5
+  coridor_width: 3
 --- !u!1 &1780939200
 GameObject:
   m_ObjectHideFlags: 0
@@ -47954,7 +47979,7 @@ Transform:
   m_GameObject: {fileID: 2003380422}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -53.77, y: -0.79, z: 0}
+  m_LocalPosition: {x: 13.579998, y: 5.810001, z: 0}
   m_LocalScale: {x: 3, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -48260,7 +48285,7 @@ Transform:
   m_GameObject: {fileID: 2010110108}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.649998, y: -0.70000076, z: 0}
+  m_LocalPosition: {x: 51.7, y: 5.9, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
