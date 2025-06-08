@@ -1,8 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+
+
 public class MainMenuControllerAuto : MonoBehaviour
 {
+    private GameObject SettingsPanel;
+    private Slider VolumeSlider;
     private GameObject manuPanel;
     private Button gameTitleButton;
     private Button playButton;
@@ -33,6 +37,14 @@ public class MainMenuControllerAuto : MonoBehaviour
         settingsButton.onClick.AddListener(OpenSettings);
         exitButton.onClick.AddListener(ExitGame);
         character.SetActive(false);
+
+        SettingsPanel = GameObject.Find("SettingsPanel");
+        VolumeSlider = GameObject.Find("VolumeSlider").GetComponent<Slider>();
+
+        SettingsPanel.SetActive(false);
+
+        VolumeSlider.value = AudioListener.volume;
+        VolumeSlider.onValueChanged.AddListener(SetVolume);
     }
 
     public void ToggleMenu()
@@ -40,7 +52,7 @@ public class MainMenuControllerAuto : MonoBehaviour
         isMenuVisible = !isMenuVisible;
         character.SetActive(isMenuVisible);
         manuPanel.SetActive(isMenuVisible);
-        
+
     }
 
     public void PlayGame()
@@ -56,7 +68,8 @@ public class MainMenuControllerAuto : MonoBehaviour
 
     public void OpenSettings()
     {
-        Debug.Log("⚙️ Settings");
+        Debug.Log("⚙️ Opening Settings");
+        SettingsPanel.SetActive(!SettingsPanel.activeSelf);
     }
 
     public void ExitGame()
@@ -64,4 +77,11 @@ public class MainMenuControllerAuto : MonoBehaviour
         Debug.Log("❌ Exit Game");
         Application.Quit();
     }
+
+    public void SetVolume(float volume)
+    {
+        AudioListener.volume = volume;
+        Debug.Log("🔊 Volume set to: " + volume);
+    }
+
 }
