@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement; 
 
 public class DoorLogic : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class DoorLogic : MonoBehaviour
     [SerializeField] GameObject timer;
     [SerializeField] float fastTimeMultiplyer = 2f;
     [SerializeField] float slowTimeMultiplyer = 0.5f;
+    [SerializeField] string winnerSceneName = "WinnerScene"; // <- Set this to your scene's name
 
     void OnTriggerExit2D(Collider2D collision)
     {
@@ -31,6 +33,9 @@ public class DoorLogic : MonoBehaviour
                     break;
                 case "YellowDoor":
                     AddExtraTime();
+                    break;
+                case "GoldDoor":
+                    Exit();
                     break;
                 case "PurpleDoor":
                     //ToggleColorBlind(collision.gameObject, isColorBlindActive);
@@ -72,7 +77,11 @@ public class DoorLogic : MonoBehaviour
         }
     }
 
-
+    private void Exit()
+    {
+        SceneManager.LoadScene(winnerSceneName);
+    }
+    
     private void ApplySpeedBoost(GameObject gameObject, GameObject timer)
     {
         Player player = gameObject.GetComponent<Player>();

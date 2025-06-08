@@ -3,7 +3,8 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public GameObject playerObject; 
-    public float roomSize = 14f;
+    public float roomxSize = 14f;
+    public float roomySize = 15f;
     public float transitionTime = 0.5f;
     public float coridor_len = 5f;
     public float coridor_width = 3f;
@@ -41,16 +42,19 @@ public class CameraController : MonoBehaviour
 
     Vector3 GetRoomCenter(Vector3 playerPos)
     {
-        float step = roomSize + coridor_len / 2;
-        int roomX = Mathf.FloorToInt(playerPos.x / step);
-        int roomY = Mathf.FloorToInt(playerPos.y / step);
+        float stepx = roomxSize + coridor_len;
+        float stepy = roomySize + coridor_len / 2;
+        int roomX = Mathf.FloorToInt(playerPos.x / stepx);
+        int roomY = Mathf.FloorToInt(playerPos.y / stepy);
 
 
         
-        float centerX = roomX * step + roomSize / 2f + (coridor_len / 2) * roomX;
-        float centerY = roomY * step + roomSize / 2f + (coridor_len / 2) * roomY;
+        float centerX = roomX * (roomxSize + coridor_len/2) + roomxSize / 2f + (coridor_len / 2) * roomX;
+        float centerY = roomY * (roomySize + coridor_len) + roomySize / 2f + (coridor_len / 2) * roomY;
 
-
+        if (roomY > 0)
+            centerY -= (roomY) * roomySize / 5;
+        Debug.Log($"RoomX: {roomX}, RoomY: {roomY}, CenterX: {centerX}, CenterY: {centerY}");
 
 
         return new Vector3(centerX, centerY, 0f);
