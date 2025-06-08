@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 33ea0b6d8f9b1c449bf6b562b769d44c
+guid: 0d6661d79610e1342b7682c1d55dd58d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4922087922089470626
-    second: bckgrnd_0
+      213: -5806429548128397179
+    second: trophy_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bckgrnd_0
+      name: trophy_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 54
         y: 0
-        width: 1536
-        height: 1024
+        width: 417
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e55dd9afc1b31bbb0800000000000000
-      internalID: -4922087922089470626
+      spriteID: 588997af61b6b6fa0800000000000000
+      internalID: -5806429548128397179
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      bckgrnd_0: -4922087922089470626
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
