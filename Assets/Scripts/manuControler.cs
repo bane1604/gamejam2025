@@ -61,12 +61,12 @@ public class MainMenuControllerAuto : MonoBehaviour
     {
         Debug.Log("▶️ Play Game");
         SceneManager.LoadScene("LalicLevel1");
-        // TODO: SceneManager.LoadScene("GameScene");
     }
 
     public void OpenTutorial()
     {
         Debug.Log("📘 Tutorial");
+        SceneManager.LoadScene("win");
     }
 
     public void OpenSettings()
