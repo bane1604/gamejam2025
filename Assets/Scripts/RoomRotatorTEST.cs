@@ -18,28 +18,47 @@ public class RoomRotatorTEST : MonoBehaviour
     {
         int count = doors.Count;
 
-        // Save which doors are currently active
+        // Save door active states, colors, and tags
         List<bool> activeDoors = new List<bool>();
+        List<Color> doorColors = new List<Color>();
+        List<string> doorTags = new List<string>();
+
         for (int i = 0; i < count; i++)
         {
-            activeDoors.Add(doors[i].activeSelf);
+            GameObject door = doors[i];
+
+            activeDoors.Add(door.activeSelf);
+
+            SpriteRenderer sr = door.GetComponent<SpriteRenderer>();
+            doorColors.Add(sr.color);
+
+            doorTags.Add(door.tag);
         }
 
-        // Deactivate all doors and show wall fills
+        // Deactivate all doors and enable wallFills
         for (int i = 0; i < count; i++)
         {
             doors[i].SetActive(false);
             wallFills[i].SetActive(true);
         }
 
-        // Activate the new door position, hide its wall fill
+        // Rotate doors
         for (int i = 0; i < count; i++)
         {
             int newIndex = (i + 1) % count;
+
             if (activeDoors[i])
             {
-                doors[newIndex].SetActive(true);
+                GameObject door = doors[newIndex];
+                door.SetActive(true);
                 wallFills[newIndex].SetActive(false);
+
+                // Rotate color
+                SpriteRenderer sr = door.GetComponent<SpriteRenderer>();
+                sr.color = doorColors[i];
+
+                // Rotate tag
+                door.tag = doorTags[i];
             }
         }
     }
