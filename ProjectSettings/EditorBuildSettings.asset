@@ -12,8 +12,11 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuScene.unity
     guid: 5f5bc4414c7930f418f3c187d737499b
   - enabled: 1
-    path: Assets/Scenes/LalicLevel1.unity
+    path: Assets/Scenes/LalicLevel1Audio.unity
     guid: ce53d8eebdda66b449f5008448b895df
+  - enabled: 1
+    path: Assets/Scenes/win.unity
+    guid: 4da9122a1f08b2048a1585573a6835d4
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
