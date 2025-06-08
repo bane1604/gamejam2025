@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      korak1PNG_0: -8346415768494565199
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

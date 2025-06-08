@@ -17,7 +17,6 @@
 *.userprefs
 *.pidb
 *.booproj
-*.meta
 
 # OS fajlovi
 .DS_Store
@@ -28,6 +27,8 @@ desktop.ini
 # IDE foldere
 .vscode/
 .idea/
+.vs/
+UserSettings/
 
 # Unity Collab (ako ne koristite)
 .collabignore
