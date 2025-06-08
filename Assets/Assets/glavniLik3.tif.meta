@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      glavniLik3_0: -859706723321314208
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

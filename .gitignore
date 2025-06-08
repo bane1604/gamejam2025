@@ -27,6 +27,7 @@ desktop.ini
 # IDE foldere
 .vscode/
 .idea/
+.vs/
 
 # Unity Collab (ako ne koristite)
 .collabignore
