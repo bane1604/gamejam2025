@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     public float slowSpeed = 0.5f;
     public bool isInverted = false;
     public bool movementEnabled = false;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     public Animator _animator;
