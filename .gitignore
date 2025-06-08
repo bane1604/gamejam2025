@@ -17,7 +17,6 @@
 *.userprefs
 *.pidb
 *.booproj
-*.meta
 
 # OS fajlovi
 .DS_Store
