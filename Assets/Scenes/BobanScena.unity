@@ -374,7 +374,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   invertDelay: 1
-  colorBlindOverlay: {fileID: 1172706888}
   timer: {fileID: 1922839817}
   fastTimeMultiplyer: 2
   slowTimeMultiplyer: 0.5
@@ -873,6 +872,7 @@ MonoBehaviour:
   speedBoost: 1.5
   slowSpeed: 0.5
   isInverted: 0
+  movementEnabled: 1
   _animator: {fileID: 1195222271}
 --- !u!4 &1182592212
 Transform:
@@ -1057,7 +1057,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   invertDelay: 1
-  colorBlindOverlay: {fileID: 1172706888}
   timer: {fileID: 1922839817}
   fastTimeMultiplyer: 2
   slowTimeMultiplyer: 0.5
@@ -1209,7 +1208,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   invertDelay: 1
-  colorBlindOverlay: {fileID: 1172706888}
   timer: {fileID: 1922839817}
   fastTimeMultiplyer: 2
   slowTimeMultiplyer: 0.5
@@ -1477,7 +1475,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   invertDelay: 1
-  colorBlindOverlay: {fileID: 1172706888}
   timer: {fileID: 1922839817}
   fastTimeMultiplyer: 2
   slowTimeMultiplyer: 0.5
